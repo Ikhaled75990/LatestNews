@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_container"
+    android:layout_width="match_parent"
+    android:layout_height="190dp"
+    android:layout_margin="16dp"
+    android:background="@color/primary"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/published_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        tools:text="@string/published_date" />
+
+    <TextView
+        android:id="@+id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:maxLines="2"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="@string/title_text" />
+
+    <TextView
+        android:id="@+id/author_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text_view"
+        android:maxLines="1"
+        android:paddingTop="8dp"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        tools:text="@string/author_text" />
+
+    <TextView
+        android:id="@+id/body_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/author_text_view"
+        android:maxLines="3"
+        android:paddingTop="8dp"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/primary_text"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        tools:text="@string/body_text" />
+
+    <TextView
+        android:id="@+id/section_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/secondary_text"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tools:text="@string/section_text" />
+
+</RelativeLayout>
