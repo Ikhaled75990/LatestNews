@@ -31,6 +31,8 @@ public class LatestNewsActivity extends AppCompatActivity implements LoaderManag
     private static final int LATEST_NEWS_LOADER_ID = 1;
 
     private static final String REQUEST_URL = "https://content.guardianapis.com/search?page-size=20&api-key=67ea10eb-bfc6-4d99-97b9-ce277a0a5e95";
+    private static final String SEARCH_URL = "https://content.guardianapis.com/search?";
+    private static final String BASE_SEARCH_URL= "page-size=20&api-key=67ea10eb-bfc6-4d99-97b9-ce277a0a5e95";
 
     private ListView listView;
     private LatestNewsAdapter mAdapter;
@@ -54,7 +56,6 @@ public class LatestNewsActivity extends AppCompatActivity implements LoaderManag
         emptyStateTextView = (TextView) findViewById(R.id.empty_view);
 
         mProgBar = (ProgressBar) findViewById(R.id.loading_indicator);
-        mProgBar.setVisibility(View.GONE);
 
         loaderManager = getLoaderManager();
         loaderManager.initLoader(1, null, this);
@@ -77,7 +78,7 @@ public class LatestNewsActivity extends AppCompatActivity implements LoaderManag
                     loaderManager.initLoader(LATEST_NEWS_LOADER_ID, null, LatestNewsActivity.this);
                     mAdapter.clear();
                     String userQuery = searchField.getText().toString();
-                    query = REQUEST_URL + userQuery;
+                    query = SEARCH_URL + userQuery + BASE_SEARCH_URL;
                     getLoaderManager().restartLoader(LATEST_NEWS_LOADER_ID, null, LatestNewsActivity.this);
                 } else {
                     mProgBar.setVisibility(View.GONE);
