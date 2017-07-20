@@ -44,12 +44,6 @@ public class LatestNewsAdapter extends ArrayAdapter<LatestNews> {
             TextView titleTextView = (TextView) listView.findViewById(R.id.title_text_view);
             titleTextView.setText(currentItem.getmTitle());
 
-            TextView authorTextView = (TextView) listView.findViewById(R.id.author_text_view);
-            authorTextView.setText(currentItem.getmAuthor());
-
-            TextView bodyTextView = (TextView) listView.findViewById(R.id.body_text_view);
-            bodyTextView.setText(currentItem.getmBody());
-
             TextView sectionTextView = (TextView) listView.findViewById(R.id.section_text_view);
             sectionTextView.setText(currentItem.getmSectionName());
 
@@ -58,17 +52,17 @@ public class LatestNewsAdapter extends ArrayAdapter<LatestNews> {
         return listView;
     }
 
-    public String formatDate(String date){
+    public String formatDate(String date) {
         String newFormatData = "";
         if (date.length() >= 10) {
             CharSequence splittedDate = date.subSequence(0, 10);
-            try{
+            try {
                 Date formatDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(splittedDate.toString());
                 newFormatData = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(formatDate);
-            }catch (ParseException e){
+            } catch (ParseException e) {
                 Log.e(LOG_TAG, e.getMessage());
             }
-        }else{
+        } else {
             newFormatData = date;
         }
 

@@ -147,28 +147,9 @@ public class QueryUtils {
                     if (singleNews.has("webUrl")) {
                         webUrl = singleNews.getString("webUrl");
                     }
-                    JSONArray tagsArray;
-                    String authorName = "";
-                    if (singleNews.has("tags")) {
-                        tagsArray = singleNews.getJSONArray("tags");
-                        if (tagsArray.length() > 0) {
-                            for (int author = 0; author < 1; author++) {
-                                JSONObject tags = tagsArray.getJSONObject(author);
-                                if (tags.has("webTitle")) {
-                                    authorName = tags.getString("webTitle");
-                                }
-                            }
-                        }
-                    }
-                    String descText = "";
-                    if (singleNews.has("fields")) {
-                        JSONObject fields = singleNews.getJSONObject("fields");
-                        if (fields.has("trailText")) {
-                            descText = fields.getString("trailTExt");
-                        }
-                    }
 
-                    LatestNews news = new LatestNews(title, sectionName, publishedDate, webUrl, descText, authorName);
+
+                    LatestNews news = new LatestNews(title, sectionName, publishedDate, webUrl);
                     latestNews.add(news);
                 }
             } else {

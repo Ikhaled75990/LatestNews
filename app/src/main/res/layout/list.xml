@@ -31,31 +31,6 @@
         android:textStyle="bold"
         tools:text="@string/title_text" />
 
-    <TextView
-        android:id="@+id/author_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title_text_view"
-        android:maxLines="1"
-        android:paddingTop="8dp"
-        android:textAppearance="?android:textAppearanceSmall"
-        android:textColor="@color/secondary_text"
-        android:textSize="16sp"
-        android:textStyle="italic"
-        tools:text="@string/author_text" />
-
-    <TextView
-        android:id="@+id/body_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/author_text_view"
-        android:maxLines="3"
-        android:paddingTop="8dp"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@color/primary_text"
-        android:textSize="14sp"
-        android:textStyle="normal"
-        tools:text="@string/body_text" />
 
     <TextView
         android:id="@+id/section_text_view"
