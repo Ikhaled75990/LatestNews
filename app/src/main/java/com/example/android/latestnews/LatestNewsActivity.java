@@ -30,7 +30,7 @@ public class LatestNewsActivity extends AppCompatActivity implements LoaderManag
 
     private static final int LATEST_NEWS_LOADER_ID = 1;
 
-    private static final String REQUEST_URL = "https://content.guardianapis.com/search?page-size=20&show-tags=contributor&show-fields=all&api-key=67ea10eb-bfc6-4d99-97b9-ce277a0a5e95";
+    private static final String REQUEST_URL = "https://content.guardianapis.com/search?page-size=20&api-key=67ea10eb-bfc6-4d99-97b9-ce277a0a5e95";
 
     private ListView listView;
     private LatestNewsAdapter mAdapter;
@@ -46,7 +46,6 @@ public class LatestNewsActivity extends AppCompatActivity implements LoaderManag
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.latest_news_activity);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         listView = (ListView) findViewById(R.id.list);
